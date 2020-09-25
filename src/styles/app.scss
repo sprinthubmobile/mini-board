@@ -1,0 +1,56 @@
+* {
+  scrollbar-color: $secondary transparent;
+  scrollbar-width: thin;
+  cursor: default;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.25rem;
+  height: 0.125rem;
+  z-index: 1;
+}
+
+::-webkit-scrollbar-corner {
+  display: none
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+  border-radius: 0
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  padding: 0.5rem
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.page-title {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: $primary;
+  border-bottom: medium solid $primary;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.card+.card {
+  margin-top: 1rem;
+}
+
+.scrollable {
+  overflow: scroll;
+}

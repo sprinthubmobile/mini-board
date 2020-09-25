@@ -1,0 +1,53 @@
+$default: #333333;
+$primary: #002F85;
+$accent: $primary;
+$secondary: #CB0000;
+$default-background: #ffffff;
+$app-font-size: 1rem;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'styles/bootstrap-icons.scss';
+@import 'styles/app.scss';
+
+body {
+  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $default-background;
+  color: $default;
+  font-size: $app-font-size;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Light.ttf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Light.ttf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Bold.ttf');
+  font-weight: bold;
+}

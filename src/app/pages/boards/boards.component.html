@@ -1,0 +1,19 @@
+<div class="row flex-nowrap">
+  <div class="col-10 col-md-3" *ngFor="let board of boards; let boardId = index">
+    <div class="border border-dashed border-primary rounded p-2">
+      <h5 class="text-black-50 p-3">{{board.name}}</h5>
+      <div class="card" *ngFor="let task of board.tasks; let taskId = index">
+        <h6 class="card-header d-flex justify-content-between">TSK-{{task.id}} <span class="badge" [class.badge-success]="task.completed">{{task.completed? 'Completed': 'Incomplete'}}</span></h6>
+        <div class="card-body">{{task.title}}</div>
+        <div class="card-footer d-flex">
+          <button *ngIf="boardId > 0" class="btn btn-secondary mr-auto" type="button" (click)="moveTask(task,(board.id - 1), board, taskId)">
+            <i class="bi bi-caret-left-fill mr-3"></i> Move to <b>{{boards[(boardId - 1)]?.name}}</b>
+          </button>
+          <button *ngIf="boardId < (boards.length - 1)" class="btn btn-secondary ml-auto" type="button" (click)="moveTask(task,(boardId + 1), board, taskId)">
+            Move to <b>{{boards[(boardId + 1)]?.name}}</b> <i class="bi bi-caret-right-fill ml-3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

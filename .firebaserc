@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "project-name"
+  },
+  "targets": {
+    "project-name": {
+      "hosting": {
+        "prod": [
+          "mini-board-sprinthub"
+        ]
+      }
+    }
+  }
+}
